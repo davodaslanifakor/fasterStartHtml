@@ -7,9 +7,7 @@
 	<meta name="viewport" content="width=600,initial-scale = 2.3,user-scalable=no">
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
 	<link rel="stylesheet" href="./font_css/materialicon/materialdesignicons.css">
-	<link rel="stylesheet" href="./font_css/iransans/iransans.css">
 	<link rel="stylesheet" href="./fast-style.css">
 </head>
 <body>
@@ -259,33 +257,7 @@
 		src="http://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
+		<script src="./ui.js"></script>
 
-		<script>
-			$('.group-form input').blur(function () {
-				if ($(this).val().length > 0) {
-					$(this).addClass('active');
-					return false;
-				} else {
-					$(this).removeClass('active');
-				}
-			});
-			$(document).on('click','.tcon-menu--xcross',function (e) {
-				e.stopPropagation();
-				$(this).toggleClass('tcon-transform')
-				$('.navigation').toggleClass('open')
-				$('.overwrapper').toggleClass('open')
-
-			})
-
-			
-			$(document).on('click',function(e){
-				$('.tcon-menu--xcross').removeClass('tcon-transform')
-				$('.navigation').removeClass('open')
-				$('.overwrapper').removeClass('open')
-				
-			})
-
-
-		</script>
 	</body>
 	</html>

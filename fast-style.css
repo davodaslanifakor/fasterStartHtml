@@ -1,6 +1,8 @@
 @import url(reset.css);
 @import url(grid.min.css);
 @import url(btn.css);
+@import url(./font_css/iransans/iransans.css);
+
 .elips {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -21,7 +23,7 @@
 *,
 body,
 html {
-  font-family: IRANSans
+  font-family: IRANSans;
 }
 
 body {
@@ -468,8 +470,7 @@ body {
   position: relative;
   top: 2px
 }
-
-.tcon {
+.menu .tcon {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -495,23 +496,19 @@ body {
   right: 10px;
   top: 10px;
   -webkit-tap-highlight-color: transparent;
-  display: none
+  display: none;
 }
-
-.tcon>* {
-  display: block
+.menu .tcon > * {
+  display: block;
 }
-
-.tcon:focus,
-.tcon:hover {
-  outline: 0
+.menu .tcon:focus,
+.menu .tcon:hover {
+  outline: 0;
 }
-
-.tcon::-moz-focus-inner {
-  border: 0
+.menu .tcon::-moz-focus-inner {
+  border: 0;
 }
-
-.tcon-menu__lines {
+.menu .tcon-menu__lines {
   display: inline-block;
   height: 5.71px;
   width: 40px;
@@ -519,11 +516,10 @@ body {
   -webkit-transition: .3s;
   transition: .3s;
   background: #000;
-  position: relative
+  position: relative;
 }
-
-.tcon-menu__lines::after,
-.tcon-menu__lines::before {
+.menu .tcon-menu__lines::after,
+.menu .tcon-menu__lines::before {
   display: inline-block;
   height: 5.71px;
   border-radius: 2.86px;
@@ -535,49 +531,40 @@ body {
   left: 0;
   -webkit-transform-origin: 2.86px center;
   transform-origin: 2.86px center;
-  width: 100%
+  width: 100%;
 }
-
-.tcon-menu__lines::before {
-  top: 10px
+.menu .tcon-menu__lines::before {
+  top: 10px;
 }
-
-.tcon-menu__lines::after {
-  top: -10px
+.menu .tcon-menu__lines::after {
+  top: -10px;
 }
-
-.tcon-transform .tcon-menu__lines {
-  -webkit-transform: scale3d(.8, .8, .8);
-  transform: scale3d(.8, .8, .8)
+.menu .tcon-transform .tcon-menu__lines {
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.8, 0.8, 0.8);
 }
-
-.tcon-menu--xcross {
-  width: auto
+.menu .tcon-menu--xcross {
+  width: auto;
 }
-
-.tcon-menu--xcross.tcon-transform .tcon-menu__lines {
-  background: 0 0
+.menu .tcon-menu--xcross.tcon-transform .tcon-menu__lines {
+  background: 0 0;
 }
-
-.tcon-menu--xcross.tcon-transform .tcon-menu__lines::after,
-.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
+.menu .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after,
+.menu .tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
   top: 0;
-  width: 40px
+  width: 40px;
 }
-
-.tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
+.menu .tcon-menu--xcross.tcon-transform .tcon-menu__lines::before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
-  transform: rotate3d(0, 0, 1, 45deg)
+  transform: rotate3d(0, 0, 1, 45deg);
 }
-
-.tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
+.menu .tcon-menu--xcross.tcon-transform .tcon-menu__lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
-  transform: rotate3d(0, 0, 1, -45deg)
+  transform: rotate3d(0, 0, 1, -45deg);
 }
-
-.tcon-visuallyhidden {
+.menu .tcon-visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -585,21 +572,20 @@ body {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px
+  width: 1px;
 }
-
-.tcon-visuallyhidden:active,
-.tcon-visuallyhidden:focus {
+.menu .tcon-visuallyhidden:active,
+.menu .tcon-visuallyhidden:focus {
   clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
-  width: auto
+  width: auto;
 }
 
 @media screen and (max-width:992px) {
-  .tcon {
+  .menu .tcon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex

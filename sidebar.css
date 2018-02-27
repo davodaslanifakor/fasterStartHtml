@@ -1,0 +1,147 @@
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -350px;
+  width: 350px;
+  text-align: center;
+  background: #fff;
+  transition: all 0.4s cubic-bezier(0, -0.22, 0.18, 1.06);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.sidebar .list-sidebar ul {
+  padding-top: 60px;
+}
+.sidebar .list-sidebar ul li {
+  display: block;
+}
+.sidebar .list-sidebar ul li a {
+  display: block;
+  padding: 15px 0;
+  background: #fff;
+  color: #000;
+  position: relative;
+  font-family: IRANSans;
+}
+.sidebar .list-sidebar ul li a::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+  border-bottom: 2px solid #2f9e8e;
+  transform: scale3d(0, 1, 1);
+  transition: all 0.2s cubic-bezier(0, -0.22, 0.18, 1.06);
+}
+.sidebar .list-sidebar ul li a:hover::before {
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.3s;
+}
+.sidebar .tcon {
+  cursor: pointer;
+  border: none;
+  height: 40px;
+  width: 30px;
+  position: fixed;
+  top: 5px;
+  right: 15px;
+  z-index: 999;
+  transition: 0.3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99999;
+}
+.sidebar .tcon > * {
+  display: block;
+}
+.sidebar .tcon:hover,
+.sidebar .tcon:focus {
+  outline: none;
+}
+.sidebar .tcon::-moz-focus-inner {
+  border: 0;
+}
+.sidebar .tcon-menu__lines {
+  display: inline-block;
+  height: 2px;
+  width: 35px;
+  border-radius: 2.85714px;
+  transition: 0.3s;
+  background: #2f569e;
+  position: relative;
+}
+.sidebar .tcon-menu__lines::before,
+.sidebar .tcon-menu__lines::after {
+  display: inline-block;
+  height: 2px;
+  width: 35px;
+  border-radius: 2.85714px;
+  transition: 0.3s;
+  background: #2f569e;
+  content: '';
+  position: absolute;
+  right: 0;
+  transform-origin: 18.85714px center;
+  width: 100%;
+}
+.sidebar .tcon-menu__lines::before {
+  top: 10px;
+}
+.sidebar .tcon-menu__lines::after {
+  top: -10px;
+}
+.sidebar .tcon-transform .tcon-menu__lines {
+  transform: scale3d(0.8, 0.8, 0.8);
+}
+.sidebar .tcon-menu--arrow,
+.sidebar .tcon-menu--arrowleft {
+  width: auto;
+}
+.sidebar .tcon-menu--arrow.tcon-transform .tcon-menu__lines::before,
+.sidebar .tcon-transform.tcon-menu--arrowleft .tcon-menu__lines::before,
+.sidebar .tcon-menu--arrow.tcon-transform .tcon-menu__lines::after,
+.sidebar .tcon-transform.tcon-menu--arrowleft .tcon-menu__lines::after {
+  top: 0;
+  width: 20.22222px;
+}
+.sidebar .tcon-menu--arrow.tcon-transform .tcon-menu__lines::before,
+.sidebar .tcon-transform.tcon-menu--arrowleft .tcon-menu__lines::before {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+.sidebar .tcon-menu--arrow.tcon-transform .tcon-menu__lines::after,
+.sidebar .tcon-transform.tcon-menu--arrowleft .tcon-menu__lines::after {
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+.sidebar .tcon-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.sidebar .tcon-visuallyhidden:active,
+.sidebar .tcon-visuallyhidden:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.sidebar.open {
+  right: 0;
+}
+/* #sidebar{
+  display: block;
+} */

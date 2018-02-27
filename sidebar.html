@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sidebar</title>
+	<link rel="stylesheet" href="./sidebar.css">
+	<link rel="stylesheet" href="./fast-style.css">
+	
+	
+
+</head>
+<body>
+	<!-- :class="{'open':isSidebar}" -->
+	<aside class="sidebar" >
+		<div > <!-- @click="toggle('isSidebar')" -->
+			<button type="button" id="sidebar" class="tcon tcon-menu--arrow tcon-menu--arrowleft" > <!-- :class="{'tcon-transform':isSidebar}"  -->
+				<span class="tcon-menu__lines" aria-hidden="true"></span>
+				<span class="tcon-visuallyhidden">toggle menu</span>
+			</button>
+		</div>
+		<div class="list-sidebar"  >
+			<ul >
+				<li><a href="">متن منو</a></li>
+				<li><a href="">متن منو</a></li>
+				<li><a href="">متن منو</a></li>
+				<li><a href="">متن منو</a></li>
+			</ul>
+		</div>
+		
+	</aside>
+			<script
+		src="http://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="./ui.js"></script>
+
+</body>
+</html>
